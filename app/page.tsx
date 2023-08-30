@@ -1,6 +1,6 @@
-import Navbar from '@/components/clients/NavBar'
-import SigninBtn from '@/components/clients/SigninBtn'
-import UserInfo from '@/components/clients/UserInfo'
+import React from 'react';
+import Navbar from '../components/clients/NavBar'
+import UserInfo from '../components/clients/Userinfo.jsx'
 export default function Home() {
   return (
     <main>
