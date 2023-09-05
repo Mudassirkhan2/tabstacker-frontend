@@ -30,3 +30,10 @@ export default function UserInfo() {
     return <SignInBtn />;
   }
 }
+
+// componentDidMount() {
+//   console. log("CLIENT SIDE");
+//   const { token, refreshToken } = this.props.query;
+//   localStorage.setItem('token', token);
+//   localStorage.setItem('refreshToken', refreshToken);
+// };
