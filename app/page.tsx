@@ -4,9 +4,10 @@ import UserInfo from '../components/clients/Userinfo.jsx'
 export default function Home() {
   return (
     <main>
-      <Navbar/>
+      <Navbar />
       <div className='min-h-screen flex items-center justify-center'>
-      <UserInfo/>
+        <UserInfo />
+
       </div>
     </main>
   )

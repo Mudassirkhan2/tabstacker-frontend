@@ -2,9 +2,9 @@
 "use client";
 
 import Image from "next/image";
-import SignInBtn from "./SigninBtn";
-import { useSession } from "next-auth/react";
+import SignUpBtn from "./SignUpBtn";
 
+import { useSession } from "next-auth/react";
 export default function UserInfo() {
   const { status, data: session } = useSession();
 
@@ -27,7 +27,7 @@ export default function UserInfo() {
       </div>
     );
   } else {
-    return <SignInBtn />;
+    return <SignUpBtn />;
   }
 }
 
