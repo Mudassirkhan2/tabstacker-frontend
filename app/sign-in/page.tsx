@@ -1,6 +1,6 @@
 
 import Navbar from '@/components/clients/NavBar';
-import SigninBtn from '@/components/clients/SignInBtn';
+import SigninBtn from '@/components/clients/SignINBtn';
 const page = () => {
     return (
         <div>
