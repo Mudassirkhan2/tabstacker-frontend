@@ -23,14 +23,12 @@ const SignUpBtn = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent the form from submitting (for this example)
-
-    // Now you can access the values of email and password
+    e.preventDefault(); // Prevent the form from submitting 
     console.log('Email:', email);
     console.log('Password:', password);
     console.log('Username:', fullname);
     try {
-      const response = await fetch('http://localhost:8000/user/signup', {
+      const response = await fetch('https://tabstacker-backend.onrender.com/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
