@@ -1,12 +1,12 @@
 
 import Navbar from '@/components/clients/NavBar';
-import SigninBtn from '@/components/clients/SignINBtn';
+// import SigninBtn from '@/components/clients/SignINBtn';
 const page = () => {
     return (
         <div>
             <Navbar />
             <div className='min-h-screen flex items-center justify-center'>
-                <SigninBtn />
+                {/* <SigninBtn /> */}
             </div>
         </div>
     )
