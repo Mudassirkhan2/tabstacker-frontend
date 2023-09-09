@@ -1,7 +1,6 @@
 
 import Navbar from '@/components/clients/NavBar';
 import SigninBtn from '@/components/clients/SignInBtn';
-
 const page = () => {
     return (
         <div>
