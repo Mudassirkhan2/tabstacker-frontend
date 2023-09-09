@@ -2,7 +2,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import googleImg from '../../public/googleImg.svg'
+import googleImg from '@/public/googleImg.svg'
 import { signIn } from 'next-auth/react'
 import { useState } from 'react'
 import Link from "next/link"
