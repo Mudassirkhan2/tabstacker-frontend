@@ -1,13 +1,13 @@
 
 import Navbar from '@/components/clients/NavBar';
 import SignInBtn from "../SignInBtn";
+import Image from 'next/image';
+import SideImage from "../assets/SideImage.png"
 const page = () => {
     return (
         <div>
-            <Navbar />
-            <div className='min-h-screen flex items-center justify-center'>
-                <SignInBtn />
-            </div>
+            {/* <Navbar /> */}
+            <SignInBtn />
         </div>
     )
 }
