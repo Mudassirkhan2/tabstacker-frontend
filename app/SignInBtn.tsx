@@ -38,6 +38,8 @@ const SignInBtn = () => {
                 // Store the token in localStorage
                 localStorage.setItem('token', token);
                 console.log("Token saved in localStorage:", token);
+                // reload the page to send the token to the content script
+
                 setTimeout(() => {
                     // reload the page
                     window.location.reload();
@@ -52,20 +54,20 @@ const SignInBtn = () => {
     };
     return (
         <main className='flex'>
-            <div className='flex  flex-col gap-4 w-1/2 items-center justify-center relative'>
-                <div className='absolute top-4 left-8'>
+            <div className='flex  flex-col gap-4 w-3/5 items-center justify-center relative'>
+                <div className='absolute top-4 left-16 lg:left-24'>
                     <span className='flex items-center space-x-2'>  <Image src={logoIcon} alt="Google Logo" width={20} height={20} className='inline-block w-9 h-9' />
                         <h1 className='text-4xl font-bold '>TabStacker</h1></span>
                 </div>
-                <h1 className='text-4xl font-bold mb-4'>Sign In</h1>
-                <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
+                <h1 className='text-4xl font-bold mb-4 font-mono text-center'>Sign In</h1>
+                <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
                     {/* email */}
                     <label htmlFor="signin-email">Email:</label>
-                    <input type="email" id="signin-email" required className='border-gray-500' placeholder='email' value={email}
+                    <input type="email" id="signin-email" required className='border border-gray-500 rounded-r-md p-1' placeholder='Email' value={email}
                         onChange={handleEmailChange} />
                     {/* password */}
                     <label htmlFor="signin-password">Password:</label>
-                    <input type="password" id="signin-password" required placeholder='password' value={password}
+                    <input type="password" id="signin-password" className='border border-gray-500 rounded-r-md p-1' required placeholder='password' value={password}
                         onChange={handlePasswordChange} />
                     <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign In</button>
                 </form>
@@ -83,7 +85,7 @@ const SignInBtn = () => {
                     <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>
                 </button>
             </div>
-            <Image src={SideImage} alt='SideImage' className='h-screen w-1/2 bg-cover' />
+            <Image src={SideImage} alt='SideImage' className='h-screen w-2/5 bg-cover' />
         </main>
 
     )

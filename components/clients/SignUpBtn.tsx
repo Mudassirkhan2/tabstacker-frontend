@@ -41,24 +41,24 @@ const SignUpBtn = () => {
   };
   return (
     <main className='flex'>
-      <div className='flex  flex-col gap-4 w-1/2 items-center justify-center relative'>
+      <div className='flex  flex-col gap-4 w-3/5 items-center justify-center relative'>
         <div className='absolute top-4 left-6'>
           <span className='flex items-center space-x-2'>  <Image src={logoIcon} alt="Google Logo" width={20} height={20} className='inline-block w-9 h-9' />
             <h1 className='text-4xl font-bold '>TabStacker</h1></span>
         </div>
-        <h1 className='text-4xl font-bold mb-4'>Create Account </h1>
-        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
+        <h1 className='lg:text-4xl md:text-3xl font-bold mb-4 font-mono'>Create Account</h1>
+        <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
           {/* fullname */}
           <label htmlFor="signin-fullname">Username:</label>
-          <input type="text" id="signin-fullname" required className='border-gray-300 rounded' placeholder='fullname' value={fullname}
+          <input type="text" id="signin-fullname" required className='border border-gray-500 rounded-r-md p-1' placeholder='fullname' value={fullname}
             onChange={handleUsernameChange} />
           {/* email */}
           <label htmlFor="signin-email">Email:</label>
-          <input type="email" id="signin-email" required className='border-gray-300 rounded' placeholder='email' value={email}
+          <input type="email" id="signin-email" required className='border border-gray-500 rounded-r-md p-1' placeholder='Email' value={email}
             onChange={handleEmailChange} />
           {/* password */}
           <label htmlFor="signin-password">Password:</label>
-          <input type="password" id="signin-password" required placeholder='password' className='border-gray-300 rounded' value={password}
+          <input type="password" id="signin-password" required placeholder='password' className='border border-gray-500 rounded-r-md p-1' value={password}
             onChange={handlePasswordChange} />
           <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign Up</button>
         </form>
@@ -75,7 +75,7 @@ const SignUpBtn = () => {
           <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>
         </button>
       </div>
-      <Image src={SideImage} alt='SideImage' className='h-screen w-1/2' />
+      <Image src={SideImage} alt='SideImage' className='h-screen w-2/5' />
     </main>
 
   )
