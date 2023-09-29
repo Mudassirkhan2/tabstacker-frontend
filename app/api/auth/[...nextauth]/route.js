@@ -33,7 +33,9 @@ const authOptions = {
             const token = data.token;
             console.log("Token:", token);
             if (res.ok) {
-
+              // If response status code is OK (200)
+              // set data to the response body
+              // and return it
             }
 
 

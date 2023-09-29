@@ -69,7 +69,7 @@ const SignUpBtn = () => {
           <p className='mx-4 font-semibold text-center dark:text-teal-400'>OR</p>
         </div>
         <button
-          onClick={() => signIn('google')}
+          onClick={() => signIn('google', { callbackUrl: 'http://localhost:3000/' })}
           className='  flex items-center gap-4 shadow-md rounded-lg pl-3'>
           <Image src={googleImg} alt="Google Logo" width={20} height={20} />
           <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>

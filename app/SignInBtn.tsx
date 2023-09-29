@@ -1,21 +1,27 @@
 
 "use client"
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import googleImg from '@/public/googleImg.svg'
 import SideImage from "../app/assets/SideImage.png"
 import logoIcon from "../app/assets/logoIcon.svg"
 import { signIn } from 'next-auth/react'
-import { useState } from 'react'
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 const SignInBtn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // const [session, loading] = signIn('google', { callbackUrl: 'http://localhost:3000/' })
+
+    const router = useRouter();
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     };
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value);
+    };
+    const handleSignIn = async () => {
+        signIn('google', { callbackUrl: 'http://localhost:3000/' })
     };
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault(); // Prevent the form from submitting 
@@ -79,7 +85,7 @@ const SignInBtn = () => {
                     <p className='mx-4 font-semibold text-center dark:text-teal-400'>OR</p>
                 </div>
                 <button
-                    onClick={() => signIn('google')}
+                    onClick={handleSignIn}
                     className='  flex items-center gap-4 shadow-md rounded-lg pl-3'>
                     <Image src={googleImg} alt="Google Logo" width={20} height={20} />
                     <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>

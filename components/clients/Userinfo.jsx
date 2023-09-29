@@ -1,8 +1,10 @@
 
 "use client";
-import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import EntryPage from "./EntryPage";
+import Link from 'next/link';
+
 export default function UserInfo() {
     const { status, data: session } = useSession();
     const [email, setEmail] = useState(null);
@@ -53,28 +55,18 @@ export default function UserInfo() {
     }, [email, session?.user?.email, setEmail]);
     if (status === "authenticated") {
         return (
-            <div className="shadow-xl p-8 rounded-md flex flex-col gap-3 bg-yellow-200 justify-center items-center min-h-screen">
-                <Image
-                    className="rounded-full"
-                    src={session?.user?.image}
-                    width={60}
-                    height={60}
-                    alt="user image"
-                />
-                <div>
-                    Name: <span className="font-bold">{session?.user?.name}</span>
-                </div>
-                <div>
-                    Email: <span className="font-bold">{session?.user?.email}</span>
-                </div>
-                <button
-                    onClick={() => signOut()}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                    SignOut
-                </button>
-            </div>
+            <EntryPage />
         );
+    } else {
+        return (
+            <div className='flex items-center justify-center'>
+                <Link href="/sign-in">
+                    <button className="bg-lime-700 text-orange-300 text-3xl px-6 py-2 rounded-md text-center">
+                        Get Started
+                    </button>
+                </Link>
+            </div>
+        )
     }
 }
 
