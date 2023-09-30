@@ -4,7 +4,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import EntryPage from "./EntryPage";
 import Link from 'next/link';
-
+import Cookies from 'js-cookie';
 export default function UserInfo() {
     const { status, data: session } = useSession();
     const [email, setEmail] = useState(null);
@@ -34,6 +34,7 @@ export default function UserInfo() {
                         console.log(data)
                         setToken(data.token);
                         localStorage.setItem('token', data.token);
+                        // Cookies.set('token', data.token);
                         // reload the page to send the token to the content script
                         // setTimeout(() => {
                         //     // reload the page
@@ -55,7 +56,7 @@ export default function UserInfo() {
     }, [email, session?.user?.email, setEmail]);
     if (status === "authenticated") {
         return (
-            <EntryPage />
+            <EntryPage session={session} />
         );
     } else {
         return (

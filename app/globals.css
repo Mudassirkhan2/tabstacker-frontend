@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-   body{
+body{
     background-color: #0cbaba;
     background-image: linear-gradient(99deg, #0cbaba 0%, #380036 74%);
     color: white;
-   }
+}

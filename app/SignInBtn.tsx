@@ -8,6 +8,7 @@ import logoIcon from "../app/assets/logoIcon.svg"
 import { signIn } from 'next-auth/react'
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
+import Cookies from 'js-cookie';
 const SignInBtn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -43,6 +44,7 @@ const SignInBtn = () => {
                 const token = data.token;
                 // Store the token in localStorage
                 localStorage.setItem('token', token);
+                Cookies.set('token', token);
                 console.log("Token saved in localStorage:", token);
                 // reload the page to send the token to the content script
 
@@ -50,6 +52,7 @@ const SignInBtn = () => {
                     // reload the page
                     window.location.reload();
                 }, 2000);
+                router.push('/')
             } else {
                 console.error("Signin failed:", response.statusText);
             }
@@ -69,11 +72,11 @@ const SignInBtn = () => {
                 <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
                     {/* email */}
                     <label htmlFor="signin-email">Email:</label>
-                    <input type="email" id="signin-email" required className='border border-gray-500 rounded-r-md p-1' placeholder='Email' value={email}
+                    <input type="email" id="signin-email" required className='border text-black  border-gray-500 rounded-r-md p-1' placeholder='Email' value={email}
                         onChange={handleEmailChange} />
                     {/* password */}
                     <label htmlFor="signin-password">Password:</label>
-                    <input type="password" id="signin-password" className='border border-gray-500 rounded-r-md p-1' required placeholder='password' value={password}
+                    <input type="password" id="signin-password" className='border text-black  border-gray-500 rounded-r-md p-1' required placeholder='password' value={password}
                         onChange={handlePasswordChange} />
                     <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign In</button>
                 </form>

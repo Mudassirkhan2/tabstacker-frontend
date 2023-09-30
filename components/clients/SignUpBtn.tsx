@@ -8,11 +8,13 @@ import { useState } from 'react'
 import Link from "next/link"
 import SideImage from "../../app/assets/SideImage.png"
 import logoIcon from "../../app/assets/logoIcon.svg"
+import { useRouter } from 'next/navigation'
 
 const SignUpBtn = () => {
   const [fullname, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
   const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
   }
@@ -38,6 +40,8 @@ const SignUpBtn = () => {
     } catch (error) {
       console.error("Error:", error);
     }
+    router.push('/sign-in')
+
   };
   return (
     <main className='flex'>
@@ -50,15 +54,15 @@ const SignUpBtn = () => {
         <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
           {/* fullname */}
           <label htmlFor="signin-fullname">Username:</label>
-          <input type="text" id="signin-fullname" required className='border border-gray-500 rounded-r-md p-1' placeholder='fullname' value={fullname}
+          <input type="text" id="signin-fullname" required className='border border-gray-500 text-black rounded-r-md p-1' placeholder='fullname' value={fullname}
             onChange={handleUsernameChange} />
           {/* email */}
           <label htmlFor="signin-email">Email:</label>
-          <input type="email" id="signin-email" required className='border border-gray-500 rounded-r-md p-1' placeholder='Email' value={email}
+          <input type="email" id="signin-email" required className='border border-gray-500  text-black  rounded-r-md p-1' placeholder='Email' value={email}
             onChange={handleEmailChange} />
           {/* password */}
           <label htmlFor="signin-password">Password:</label>
-          <input type="password" id="signin-password" required placeholder='password' className='border border-gray-500 rounded-r-md p-1' value={password}
+          <input type="password" id="signin-password" required placeholder='password' className='border text-black  border-gray-500 rounded-r-md p-1' value={password}
             onChange={handlePasswordChange} />
           <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign Up</button>
         </form>
@@ -69,7 +73,7 @@ const SignUpBtn = () => {
           <p className='mx-4 font-semibold text-center dark:text-teal-400'>OR</p>
         </div>
         <button
-          onClick={() => signIn('google', { callbackUrl: 'http://localhost:3000/' })}
+          onClick={() => signIn('google', { callbackUrl: 'https://tabstacker.vercel.app/' })}
           className='  flex items-center gap-4 shadow-md rounded-lg pl-3'>
           <Image src={googleImg} alt="Google Logo" width={20} height={20} />
           <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>
