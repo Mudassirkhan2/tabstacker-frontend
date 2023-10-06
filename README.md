@@ -1,34 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+With TabStacker, you can effortlessly corral all your open tabs into a single, sleek page, decluttering your workspace
+Introducing TabStacker Chrome Extension
 
-## Getting Started
+TabStacker is your ultimate companion for enhancing productivity and simplifying your online life. With TabStacker, you can effortlessly organize and manage your open tabs, bringing order to the chaos and decluttering your workspace.
 
-First, run the development server:
+Seamless Sign-in
+TabStacker integrates seamlessly with our Next.js application, offering a variety of sign-in options, including Google Sign-In and traditional forms. This ensures that you have a hassle-free entry into the world of tab organization.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Effortless Tab Management
+Once you're signed in, TabStacker empowers you to take control of your browsing experience. The extension allows you to group your open tabs into folders, making it easy to categorize and access them efficiently. No more endless tab scrolling or hunting for the right webpage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Real-time Tab Overview
+TabStacker keeps you informed about your current tabs at a glance. You can quickly see which tabs are open, making it a breeze to switch between tasks or projects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Secure Data Storage
+Your tab organization data is securely sent to our MongoDB backend server. This ensures that your carefully curated tab collections are always accessible and safe, even if you switch devices or browsers.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+TabStacker is the ultimate solution for anyone who loves a tidy workspace and values efficient web browsing. Say goodbye to tab overload and hello to a more organized, simplified online life. Try TabStacker today and experience the power of tab organization like never before.
