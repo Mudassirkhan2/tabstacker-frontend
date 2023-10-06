@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NextAuthProvider from "./Providers.js"
+import Footor from '@/components/Footor'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
         <NextAuthProvider>
           <div >
             {children}
+            <Footor />
           </div>
         </NextAuthProvider>
       </body>
