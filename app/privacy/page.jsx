@@ -55,16 +55,16 @@ const page = () => {
               __________
               <bdt className="block-component" />
             </bdt>{" "}
-            (<bdt className="block-component" />"<strong>we</strong>," "
-            <strong>us</strong>," or "<strong>our</strong>"
+            (<bdt className="block-component" />&quot;<strong>we</strong>
+            <strong>us</strong>&ldquo; or &ldquo;<strong>our</strong>
             <bdt className="statement-end-if-in-editor" />
           </span>
           <span data-custom-class="body_text">
             ), describes how and why we might collect, store, use, and/or share
-            (<bdt className="block-component" />"<strong>process</strong>"
+            (<bdt className="block-component" />&quot;<strong>process</strong>&quot;
             <bdt className="statement-end-if-in-editor" />) your information
-            when you use our services (<bdt className="block-component" />"
-            <strong>Services</strong>"
+            when you use our services (<bdt className="block-component" />&quot;
+            <strong>Services</strong>&quot;
             <bdt className="statement-end-if-in-editor" />
             ), such as when you:
           </span>
@@ -966,7 +966,7 @@ const page = () => {
               media account details, like your Facebook, Twitter, or other
               social media account. If you choose to register in this way, we
               will collect the information described in the section called{" "}
-              <bdt className="block-component" />"
+              <bdt className="block-component" />&quot;
               <bdt className="statement-end-if-in-editor" />
               <span style={{ fontSize: 15 }}>
                 <span data-custom-class="body_text">
@@ -979,7 +979,7 @@ const page = () => {
                   </span>
                 </span>
               </span>
-              <bdt className="block-component" />"
+              <bdt className="block-component" />&quot;
               <bdt className="statement-end-if-in-editor" /> below.
             </span>
           </span>
@@ -1321,7 +1321,7 @@ const page = () => {
                                                         >
                                                           <strong>
                                                             To save or protect
-                                                            an individual's
+                                                            an individual&quot;s
                                                             vital interest.
                                                           </strong>{" "}
                                                           We may process your
@@ -4213,7 +4213,7 @@ const page = () => {
                                                                       in the
                                                                       section{" "}
                                                                       <bdt className="block-component" />
-                                                                      "
+                                                                      &quot;
                                                                       <bdt className="statement-end-if-in-editor" />
                                                                     </span>
                                                                   </span>
@@ -4263,7 +4263,7 @@ const page = () => {
                                                                   >
                                                                     <span data-custom-class="body_text">
                                                                       <bdt className="block-component" />
-                                                                      "
+                                                                      &quot;
                                                                       <bdt className="statement-end-if-in-editor" />{" "}
                                                                       below.
                                                                     </span>
@@ -4625,7 +4625,7 @@ const page = () => {
                                                                       in the
                                                                       section{" "}
                                                                       <bdt className="block-component" />
-                                                                      "
+                                                                      &quot;
                                                                       <bdt className="statement-end-if-in-editor" />
                                                                     </span>
                                                                   </span>
@@ -4675,7 +4675,7 @@ const page = () => {
                                                                   >
                                                                     <span data-custom-class="body_text">
                                                                       <bdt className="block-component" />
-                                                                      "
+                                                                      &quot;
                                                                       <bdt className="statement-end-if-in-editor" />{" "}
                                                                       below
                                                                       <bdt className="block-component" />
@@ -5260,7 +5260,7 @@ const page = () => {
                                                                       Do-Not-Track
                                                                       (
                                                                       <bdt className="block-component" />
-                                                                      "DNT"
+                                                                      &quot;DNT&quot;
                                                                       <bdt className="statement-end-if-in-editor" />
                                                                       ) feature
                                                                       or setting
@@ -8273,7 +8273,7 @@ const page = () => {
                                                                                     the
                                                                                     section,{" "}
                                                                                     <bdt className="block-component" />
-                                                                                    "
+                                                                                    
                                                                                     <bdt className="statement-end-if-in-editor" />
                                                                                   </span>
                                                                                   <a href="#infouse">
@@ -8300,7 +8300,7 @@ const page = () => {
                                                                                     }}
                                                                                   >
                                                                                     <bdt className="block-component" />
-                                                                                    "
+                                                                                    &quot;
                                                                                   </span>
                                                                                   <bdt className="statement-end-if-in-editor">
                                                                                     <span
@@ -8453,7 +8453,7 @@ const page = () => {
                                                                                         the
                                                                                         section,{" "}
                                                                                         <bdt className="block-component" />
-                                                                                        "
+                                                                                        &quot;
                                                                                         <bdt className="statement-end-if-in-editor" />
                                                                                       </span>
                                                                                     </span>
@@ -8506,7 +8506,7 @@ const page = () => {
                                                                                     >
                                                                                       <span data-custom-class="body_text">
                                                                                         <bdt className="block-component" />
-                                                                                        "
+                                                                                        &quot;
                                                                                         <bdt className="statement-end-if-in-editor" />
                                                                                       </span>
                                                                                     </span>
@@ -8570,7 +8570,7 @@ const page = () => {
                                                                                         to
                                                                                         be{" "}
                                                                                         <bdt className="block-component" />
-                                                                                        "selling"
+                                                                                        &quot;selling&quot;
                                                                                         <bdt className="statement-end-if-in-editor" />{" "}
                                                                                         of
                                                                                         your
@@ -8774,9 +8774,9 @@ const page = () => {
                                                                                     as
                                                                                     the{" "}
                                                                                     <bdt className="block-component" />
-                                                                                    "Shine
+                                                                                    &quot;Shine
                                                                                     The
-                                                                                    Light"
+                                                                                    Light&quot;
                                                                                     <bdt className="statement-end-if-in-editor" />{" "}
                                                                                     law
                                                                                     permits
@@ -9125,7 +9125,7 @@ const page = () => {
                                                                                       defines
                                                                                       a{" "}
                                                                                       <bdt className="block-component" />
-                                                                                      "residents"
+                                                                                      &quot;residents&quot;
                                                                                       <bdt className="statement-end-if-in-editor" />{" "}
                                                                                       as:
                                                                                     </span>
@@ -9257,7 +9257,7 @@ const page = () => {
                                                                                       defined
                                                                                       as{" "}
                                                                                       <bdt className="block-component" />
-                                                                                      "non-residents."
+                                                                                      &ldquo;non-residents.&ldquo;
                                                                                       <bdt className="statement-end-if-in-editor" />
                                                                                     </span>
                                                                                   </span>
@@ -9295,7 +9295,7 @@ const page = () => {
                                                                                       definition
                                                                                       of{" "}
                                                                                       <bdt className="block-component" />
-                                                                                      "resident"
+                                                                                      &ldquo;resident&ldquo;
                                                                                       <bdt className="statement-end-if-in-editor" />{" "}
                                                                                       applies
                                                                                       to
@@ -10796,7 +10796,7 @@ const page = () => {
                                                                                       social
                                                                                       security
                                                                                       information,
-                                                                                      drivers'
+                                                                                      drivers&quot;
                                                                                       licenses,
                                                                                       state
                                                                                       ID
@@ -12975,7 +12975,7 @@ const page = () => {
                                                                                         an
                                                                                         updated{" "}
                                                                                         <bdt className="block-component" />
-                                                                                        "Revised"
+                                                                                        &quot;Revised&quot;
                                                                                         <bdt className="statement-end-if-in-editor" />{" "}
                                                                                         date
                                                                                         and
@@ -13730,7 +13730,7 @@ const page = () => {
                                                                                 was
                                                                                 created
                                                                                 using
-                                                                                Termly's{" "}
+                                                                                Termly&quot;s{" "}
                                                                                 <a
                                                                                   style={{
                                                                                     color:
