@@ -1,50 +1,41 @@
-
-"use client";
-import { signIn, signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import EntryPage from "./EntryPage";
 import Link from 'next/link';
 import Cookies from 'js-cookie';
+
 export default function UserInfo() {
     const { status, data: session } = useSession();
     const [email, setEmail] = useState(null);
-    //previous email
     const [token, setToken] = useState('');
     const [error, setError] = useState(null);
+
     useEffect(() => {
         if (session?.user?.email) {
             setEmail(session?.user?.email);
             console.log(session?.user?.email)
             if (email) {
                 console.log("api start")
-                // Define the endpoint URL (replace with your actual server URL)
                 const endpoint = `https://tabstacker-backend.onrender.com/user/googletoken/${email}`;
-                // Make a GET request to the server
                 fetch(endpoint)
                     .then((response) => {
                         console.log("api call")
-                        // Make sure the response is valid
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
                         }
                         return response.json();
                     })
                     .then((data) => {
-                        // Handle the data from the response
                         console.log(data)
                         setToken(data.token);
-                        localStorage.setItem('token', data.token);
-                        // Cookies.set('token', data.token);
-                        // reload the page to send the token to the content script
-                        // setTimeout(() => {
-                        //     // reload the page
-                        //     window.location.reload();
-                        //     console.log("page reloaded")
-                        // }, 2000);
+                        if (!localStorage.getItem('token')) { // check if token has already been set
+                            localStorage.setItem('token', data.token);
+                            // reload the page after setting the token
+                            window.location.reload();
+                        }
                         setError(null);
                     })
                     .catch((error) => {
-                        // Handle errors
                         setError(error.message);
                         setToken('');
                     });
@@ -54,6 +45,7 @@ export default function UserInfo() {
             console.log("no email")
         }
     }, [email, session?.user?.email, setEmail]);
+
     if (status === "authenticated") {
         return (
             <EntryPage session={session} />
@@ -70,4 +62,3 @@ export default function UserInfo() {
         )
     }
 }
-
