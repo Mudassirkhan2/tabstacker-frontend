@@ -79,7 +79,7 @@ const SignUpBtn = () => {
           <span className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'>Sign in with Google</span>
         </button>
       </div>
-      <Image src={SideImage} alt='SideImage' className='h-screen w-2/5' />
+      <Image src={SideImage} alt='SideImage' className=' h-screen w-2/5' />
     </main>
 
   )
