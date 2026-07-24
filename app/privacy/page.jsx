@@ -2,16 +2,15 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div style={{ background: '#0f172a', minHeight: '100vh', paddingTop: 96, paddingBottom: 80 }}>
         <>
-  {/* Hello world */}
   <style
     dangerouslySetInnerHTML={{
       __html:
-        "\n  [data-custom-class='body'], [data-custom-class='body'] * {\n          background: transparent !important;\n        }\n[data-custom-class='title'], [data-custom-class='title'] * {\n          font-family: Arial !important;\nfont-size: 26px !important;\ncolor: #000000 !important;\n        }\n[data-custom-class='subtitle'], [data-custom-class='subtitle'] * {\n          font-family: Arial !important;\ncolor: #1abc9c  !important;\nfont-size: 14px !important;\n        }\n[data-custom-class='heading_1'], [data-custom-class='heading_1'] * {\n          font-family: Arial !important;\nfont-size: 19px !important;\ncolor: #000000 !important;\n        }\n[data-custom-class='heading_2'], [data-custom-class='heading_2'] * {\n          font-family: Arial !important;\nfont-size: 17px !important;\ncolor: #000000 !important;\n        }\n[data-custom-class='body_text'], [data-custom-class='body_text'] * {\n          color: #ecf0f1 !important;\nfont-size: 14px !important;\nfont-family: Arial !important;\n        }\n[data-custom-class='link'], [data-custom-class='link'] * {\n          color: #3030F1 !important;\nfont-size: 14px !important;\nfont-family: Arial !important;\nword-break: break-word !important;\n        }\n"
+        "\n  [data-custom-class='body'], [data-custom-class='body'] * {\n          background: transparent !important;\n        }\n[data-custom-class='title'], [data-custom-class='title'] * {\n          font-family: 'Plus Jakarta Sans', sans-serif !important;\nfont-size: 32px !important;\ncolor: #ffffff !important;\nletter-spacing: -0.03em !important;\n        }\n[data-custom-class='subtitle'], [data-custom-class='subtitle'] * {\n          font-family: 'JetBrains Mono', monospace !important;\ncolor: #818cf8 !important;\nfont-size: 12px !important;\nletter-spacing: 0.12em !important;\n        }\n[data-custom-class='heading_1'], [data-custom-class='heading_1'] * {\n          font-family: 'Plus Jakarta Sans', sans-serif !important;\nfont-size: 18px !important;\ncolor: #e2e8f0 !important;\nfont-weight: 700 !important;\n        }\n[data-custom-class='heading_2'], [data-custom-class='heading_2'] * {\n          font-family: 'Plus Jakarta Sans', sans-serif !important;\nfont-size: 16px !important;\ncolor: #cbd5e1 !important;\nfont-weight: 600 !important;\n        }\n[data-custom-class='body_text'], [data-custom-class='body_text'] * {\n          color: rgba(255,255,255,0.6) !important;\nfont-size: 15px !important;\nfont-family: 'Plus Jakarta Sans', sans-serif !important;\nline-height: 1.75 !important;\n        }\n[data-custom-class='link'], [data-custom-class='link'] * {\n          color: #818cf8 !important;\nfont-size: 15px !important;\nfont-family: 'Plus Jakarta Sans', sans-serif !important;\nword-break: break-word !important;\n        }\n.privacy-container { max-width: 780px; margin: 0 auto; padding: 0 32px; }\n"
     }}
   />
-  <div data-custom-class="body">
+  <div data-custom-class="body" className="privacy-container">
     <div>
       <strong>
         <span style={{ fontSize: 26 }}>
@@ -31,7 +30,7 @@ const page = () => {
         <strong>
           <span style={{ fontSize: 15 }}>
             <span data-custom-class="subtitle">
-              Last updated <bdt className="question">October 06, 2023</bdt>
+              Last updated <bdt className="question">October 06, {new Date().getFullYear()}</bdt>
             </span>
           </span>
         </strong>

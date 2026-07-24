@@ -14,7 +14,7 @@ export default function Footer() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <Image src={logoIcon} alt="TabStacker logo" width={28} height={28} />
           <span style={{ fontWeight: 700, color: '#fff', fontSize: 15 }}>TabStacker</span>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12 }}>© 2026</span>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12 }}>© {new Date().getFullYear()}</span>
         </div>
 
         {/* Links */}
