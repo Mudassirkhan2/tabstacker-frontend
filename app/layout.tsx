@@ -1,13 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import NextAuthProvider from "./Providers.js"
-import Footor from '@/components/Footor'
-const inter = Inter({ subsets: ['latin'] })
+import Footer from '@/components/Footor'
 
 export const metadata: Metadata = {
-  title: 'TabStacker',
-  description: 'With TabStacker, you can effortlessly corral all your open tabs into a single, sleek page, decluttering your workspace',
+  title: 'TabStacker — Stack your browser tabs',
+  description: 'TabStacker helps you organise your Chrome tabs into folders, track your most-visited tabs, and set tab limits to stay focused.',
 }
 
 export default function RootLayout({
@@ -17,12 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <NextAuthProvider>
-          <div >
-            {children}
-            <Footor />
-          </div>
+          {children}
+          <Footer />
         </NextAuthProvider>
       </body>
     </html>
